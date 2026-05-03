@@ -1,8 +1,7 @@
 from fastapi import FastAPI
-
 from fastapi.middleware.cors import CORSMiddleware
 
-app = FastAPI(title="Hackathon API")
+app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
@@ -12,7 +11,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.get("/health")
-async def health():
-    """Basic API liveness."""
-    return {"status": "ok"}
+@app.get("/")
+async def root():
+    return {"message": "Hello World"}
