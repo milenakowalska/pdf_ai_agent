@@ -4,8 +4,10 @@ A project with a FastAPI backend and React frontend.
 ---
 ## 📁 Project Structure
 
+```bash
 backend/ # FastAPI app
 frontend/ # React app
+```
 
 ---
 ## Getting Started
