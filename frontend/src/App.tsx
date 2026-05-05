@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
-
-const BASE_API_URL = process.env.REACT_APP_BASE_API_URL || "http://127.0.0.1:8000";
+import { BASE_API_URL } from "./utils";
+import { UploadDocument } from './components/UploadDocument';
 
 console.log("base url", BASE_API_URL)
 
@@ -26,6 +26,7 @@ function App() {
       <button onClick={callBackend}>
         Call Backend
       </button>
+      <UploadDocument />
 
       <p>{message}</p>
     </div>
